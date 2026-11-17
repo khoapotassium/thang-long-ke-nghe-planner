@@ -14,7 +14,7 @@ const OD = Date, NOW = new OD('2026-11-21T08:00:00+07:00').getTime();
 class MD extends OD { constructor(...a){ a.length ? super(...a) : super(NOW); } static now(){ return NOW; } }
 Date = MD;
 """
-IGNORE = ("tile.openstreetmap", "ERR_TUNNEL", "ERR_PROXY", "goatcounter", "lehoithietkesangtao")
+IGNORE = ("maps.googleapis.com", "ERR_TUNNEL", "ERR_PROXY", "goatcounter", "lehoithietkesangtao")
 
 def mine_count(p): return int(p.locator("#mine-count").inner_text() or 0)
 def ls(p, k): return p.evaluate(f"localStorage.getItem('{k}')")
@@ -25,6 +25,7 @@ with sync_playwright() as pw:
     ctx = b.new_context(viewport={"width": 390, "height": 844}, locale="vi-VN", accept_downloads=True,
                         geolocation={"latitude": 21.0287, "longitude": 105.8524}, permissions=["geolocation", "clipboard-read", "clipboard-write"])
     ctx.add_init_script(FAKE_DATE)
+    ctx.add_init_script(path=str(pathlib.Path(__file__).with_name("google_maps_mock.js")))
     # chặn mạng ngoài cho nhanh
     ctx.route(re.compile(r"^https?://(?!localhost).*"), lambda r: r.abort())
     p = ctx.new_page()

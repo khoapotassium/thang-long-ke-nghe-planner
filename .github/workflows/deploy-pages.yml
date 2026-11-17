@@ -23,6 +23,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Configure Google Maps API key
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        run: |
+          if [ -z "$GOOGLE_MAPS_API_KEY" ]; then
+            echo "::error::GOOGLE_MAPS_API_KEY secret is required"
+            exit 1
+          fi
+          node -e 'require("fs").writeFileSync("google-maps-key.js", "window.GOOGLE_MAPS_API_KEY = " + JSON.stringify(process.env.GOOGLE_MAPS_API_KEY) + ";\n")'
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload site

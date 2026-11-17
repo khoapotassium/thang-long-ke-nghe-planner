@@ -16,6 +16,7 @@ py .\test\test_chuc_nang.py
 py .\test\test_man_hinh_rong.py
 ```
 Kết quả: dòng ✓ là đạt, ✗ là lỗi, cuối cùng có "✅ Tất cả đều đạt". Ảnh chụp lưu trong `shots\`.
+Bài test dùng mock Google Maps nên không cần API key; bản web công khai lấy key từ secret `GOOGLE_MAPS_API_KEY` trong GitHub Actions.
 Kiểm tra web đã đưa lên mạng:
 ```powershell
 $env:BASE = "https://<ten>.github.io/<repo>"
