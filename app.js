@@ -47,7 +47,7 @@
       savedTo: "Đã lưu vào {0}", removedFrom: "Đã bỏ khỏi {0}", copied: "Đã sao chép link lịch trình", copyFail: "Link đã ở trên thanh địa chỉ, hãy sao chép", emptyPlan: "Lịch đang trống",
       icsDone: "Đã tạo file lịch – mở file để thêm vào lịch điện thoại", geoFail: "Không lấy được vị trí. Bạn vẫn có thể dùng web bình thường.",
       typeLabel: "Loại", here: "Bạn đang ở đây", conflictTag: "Lịch chưa thống nhất", loadFail: "Không tải được dữ liệu. Hãy thử tải lại trang.",
-      mapLoading: "Đang tải bản đồ…", mapKeyMissing: "Bản đồ Google chưa được cấu hình.", mapLoadFail: "Không tải được bản đồ. Hãy thử tải lại trang."
+      mapLoading: "Đang tải bản đồ…", mapKeyMissing: "Bản đồ tạm thời chưa khả dụng.", mapLoadFail: "Không tải được bản đồ. Hãy thử tải lại trang."
     },
     en: {
       subtitle: "Thang Long Ke Nghe - Hanoi Festival of Creative Design 2026 · community site",
@@ -81,7 +81,7 @@
       savedTo: "Saved to {0}", removedFrom: "Removed from {0}", copied: "Plan link copied", copyFail: "The link is in the address bar — copy it from there", emptyPlan: "Your plan is empty",
       icsDone: "Calendar file created – open it to add to your phone calendar", geoFail: "Couldn't get your location. Everything else still works.",
       typeLabel: "Type", here: "You are here", conflictTag: "Date not confirmed", loadFail: "Couldn't load data. Please reload the page.",
-      mapLoading: "Loading map…", mapKeyMissing: "Google Maps is not configured.", mapLoadFail: "Could not load the map. Please reload."
+      mapLoading: "Loading map…", mapKeyMissing: "The map is temporarily unavailable.", mapLoadFail: "Could not load the map. Please reload."
     }
   };
   const TYPES = {

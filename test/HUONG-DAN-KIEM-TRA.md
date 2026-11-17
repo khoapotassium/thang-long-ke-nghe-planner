@@ -16,7 +16,7 @@ py .\test\test_chuc_nang.py
 py .\test\test_man_hinh_rong.py
 ```
 Kết quả: dòng ✓ là đạt, ✗ là lỗi, cuối cùng có "✅ Tất cả đều đạt". Ảnh chụp lưu trong `shots\`.
-Bài test dùng mock Google Maps nên không cần API key; bản web công khai lấy key từ secret `GOOGLE_MAPS_API_KEY` trong GitHub Actions. Nếu bản đồ không tải, kiểm tra billing, Maps JavaScript API và referrer `https://khoapotassium.github.io/*` của key.
+Bài test dùng mock Google Maps nên không cần API key; bản web công khai lấy key từ secret `GOOGLE_MAPS_API_KEY` trong GitHub Actions. Nếu chưa có key, website vẫn deploy nhưng bản đồ tạm thời không khả dụng. Nếu bản đồ không tải, kiểm tra billing, Maps JavaScript API và referrer `https://khoapotassium.github.io/*` của key.
 Kiểm tra web đã đưa lên mạng:
 ```powershell
 $env:BASE = "https://<ten>.github.io/<repo>"
