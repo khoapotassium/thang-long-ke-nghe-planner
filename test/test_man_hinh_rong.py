@@ -9,7 +9,6 @@ with sync_playwright() as pw:
     b=pw.chromium.launch(args=["--no-sandbox"])
     ctx=b.new_context(viewport={"width":1440,"height":900},locale="vi-VN")
     ctx.add_init_script(FAKE); ctx.route(re.compile(r"^https?://(?!localhost).*"),lambda r:r.abort())
-    ctx.add_init_script(path=str(pathlib.Path(__file__).with_name("google_maps_mock.js")))
     p=ctx.new_page(); errs=[]
     p.on("pageerror",lambda e:errs.append(str(e)))
     p.goto(BASE + "/",wait_until="load"); p.wait_for_timeout(800)
@@ -20,23 +19,35 @@ with sync_playwright() as pw:
     tb=p.locator(".tabbar").bounding_box(); check(tb["y"]<200,f"Thanh tab ở trên (y={tb['y']:.0f})")
     lb=p.locator("#view-list").bounding_box(); mb=p.locator("#map").bounding_box()
     check(mb["x"]>lb["x"]+lb["width"]-1,f"Bản đồ bên phải danh sách ({lb['width']:.0f}px | {mb['width']:.0f}x{mb['height']:.0f}px)")
-    n=p.locator(".google-map-marker").count(); check(n>5,f"{n} điểm trên bản đồ")
+    n=p.locator(".leaflet-interactive").count(); check(n>5,f"{n} điểm trên bản đồ")
     p.screenshot(path="shots/wide-1.png")
     # bấm vào thẻ → bản đồ bay tới
     card=p.locator("#list article.card:has([data-focus])").nth(2)
     card.locator("h3").click(); p.wait_for_timeout(900)
-    check(p.locator(".gm-style-iw").count()==1,"Bấm thẻ → mở popup trên bản đồ")
+    check(p.locator(".leaflet-popup").count()==1,"Bấm thẻ → mở popup trên bản đồ")
     check("focus" in (card.get_attribute("class") or ""),"Thẻ được đánh dấu")
     # cuộn xuống: bản đồ vẫn dính trên màn hình
     p.mouse.wheel(0,2500); p.wait_for_timeout(500)
     mb2=p.locator("#map").bounding_box(); check(0<=mb2["y"]<150,f"Cuộn xuống, bản đồ vẫn hiện (y={mb2['y']:.0f})")
     p.locator("#list article.card:has([data-focus])").nth(8).locator("[data-focus]").click(); p.wait_for_timeout(1500)
-    check(p.locator(".gm-style-iw").count()==1,"Nút 'Xem trên bản đồ' hoạt động")
+    check(p.locator(".leaflet-popup").count()==1,"Nút 'Xem trên bản đồ' hoạt động")
     p.screenshot(path="shots/wide-2.png")
     # lưu từ popup
     before=p.locator("#mine-count").inner_text()
-    p.locator(".gm-style-iw [data-save]").first.click(); p.wait_for_timeout(400)
+    p.locator(".leaflet-popup [data-save]").first.click(); p.wait_for_timeout(400)
     check(p.locator("#mine-count").inner_text()!=before,"Lưu từ popup bản đồ")
+    # bản đồ bị khóa trong Hà Nội: thu nhỏ hết cỡ, kéo ra xa, vẫn không ra khỏi Hà Nội
+    import math
+    for _ in range(12): p.evaluate("document.querySelector('.leaflet-control-zoom-out').click()"); p.wait_for_timeout(300)
+    m=p.locator("#map").bounding_box(); cx,cy=m["x"]+m["width"]/2,m["y"]+m["height"]/2
+    p.mouse.move(cx,cy); p.mouse.down(); p.mouse.move(cx-500,cy-400,steps=10); p.mouse.up(); p.wait_for_timeout(600)
+    check("leaflet-disabled" in (p.locator(".leaflet-control-zoom-out").get_attribute("class") or ""),"Không thu nhỏ quá mức thành phố (minZoom 10)")
+    def tile_ll(z,x,y): n=2**z; return (math.degrees(math.atan(math.sinh(math.pi*(1-2*(y+.5)/n)))),(x+.5)/n*360-180)
+    srcs=p.eval_on_selector_all(".leaflet-tile","els=>els.map(e=>e.src||e.getAttribute('src')||'')")
+    tiles=[tuple(map(int,re.search(r"/(\d+)/(\d+)/(\d+)\.png",s).groups())) for s in srcs if re.search(r"/(\d+)/(\d+)/(\d+)\.png",s)]
+    out=[t for t in tiles if t[0]<10 or not (20.2<tile_ll(*t)[0]<21.7 and 105.0<tile_ll(*t)[1]<106.3)]
+    check(tiles and not out,f"Chỉ tải nền bản đồ trong vùng Hà Nội ({len(tiles)} ô, {len(out)} ô ngoài vùng)")
+    p.screenshot(path="shots/wide-2b-zoom-min.png")
     # các tab khác
     p.locator(".tabbar [data-view=plan]").click(); p.wait_for_timeout(300)
     check(not p.locator("#view-map").is_visible(),"Tab Gợi ý lịch: một cột")

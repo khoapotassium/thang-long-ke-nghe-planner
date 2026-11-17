@@ -26,6 +26,6 @@ Trang web cộng đồng, không chính thức, giúp khám phá hoạt động 
 
 ## Triển khai
 
-Để hiển thị Google Maps, thêm secret Actions `GOOGLE_MAPS_API_KEY` cho Maps JavaScript API, bật billing và giới hạn key cho API này cùng referrer `https://khoapotassium.github.io/*`. Workflow không lưu key trong mã nguồn; nếu chưa có key, website vẫn deploy nhưng bản đồ tạm thời không khả dụng.
+Bản đồ dùng Leaflet (có sẵn trong `vendor/leaflet`) với nền OpenStreetMap, miễn phí và không cần API key. Bản đồ bị khóa trong phạm vi Hà Nội (`maxBounds`, `minZoom: 10`) nên chỉ hiển thị khu vực Hà Nội.
 
 Dữ liệu sự kiện thuộc website/agenda của Ban tổ chức. Dự án cộng đồng này không liên kết hay được Ban tổ chức chứng thực.

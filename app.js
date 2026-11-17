@@ -46,8 +46,7 @@
       wiped: "Đã xóa lịch, điểm riêng và cài đặt trên máy này.", addedN: "Đã thêm {0} mục vào lịch", already: "Các mục này đã có trong lịch",
       savedTo: "Đã lưu vào {0}", removedFrom: "Đã bỏ khỏi {0}", copied: "Đã sao chép link lịch trình", copyFail: "Link đã ở trên thanh địa chỉ, hãy sao chép", emptyPlan: "Lịch đang trống",
       icsDone: "Đã tạo file lịch – mở file để thêm vào lịch điện thoại", geoFail: "Không lấy được vị trí. Bạn vẫn có thể dùng web bình thường.",
-      typeLabel: "Loại", here: "Bạn đang ở đây", conflictTag: "Lịch chưa thống nhất", loadFail: "Không tải được dữ liệu. Hãy thử tải lại trang.",
-      mapLoading: "Đang tải bản đồ…", mapKeyMissing: "Bản đồ tạm thời chưa khả dụng.", mapLoadFail: "Không tải được bản đồ. Hãy thử tải lại trang."
+      typeLabel: "Loại", here: "Bạn đang ở đây", conflictTag: "Lịch chưa thống nhất", loadFail: "Không tải được dữ liệu. Hãy thử tải lại trang."
     },
     en: {
       subtitle: "Thang Long Ke Nghe - Hanoi Festival of Creative Design 2026 · community site",
@@ -80,8 +79,7 @@
       wiped: "Your plan, stops and settings were deleted from this device.", addedN: "Added {0} items to your plan", already: "These are already in your plan",
       savedTo: "Saved to {0}", removedFrom: "Removed from {0}", copied: "Plan link copied", copyFail: "The link is in the address bar — copy it from there", emptyPlan: "Your plan is empty",
       icsDone: "Calendar file created – open it to add to your phone calendar", geoFail: "Couldn't get your location. Everything else still works.",
-      typeLabel: "Type", here: "You are here", conflictTag: "Date not confirmed", loadFail: "Couldn't load data. Please reload the page.",
-      mapLoading: "Loading map…", mapKeyMissing: "The map is temporarily unavailable.", mapLoadFail: "Could not load the map. Please reload."
+      typeLabel: "Type", here: "You are here", conflictTag: "Date not confirmed", loadFail: "Couldn't load data. Please reload the page."
     }
   };
   const TYPES = {
@@ -287,82 +285,21 @@
   }
 
   // ------------------------------------------------------------ bản đồ
-  let map = null, mapInfoWindow = null, mapLoadPromise = null, userMarker = null, markerOf = {};
+  let map = null, layer = null, markerOf = {};
   const wideMQ = window.matchMedia("(min-width: 1024px)");
   const isWide = () => wideMQ.matches;
-  function loadGoogleMaps() {
-    if (window.google && window.google.maps) return Promise.resolve(window.google.maps);
-    if (!window.GOOGLE_MAPS_API_KEY) return Promise.reject(new Error("Google Maps API key is missing"));
-    if (!mapLoadPromise) {
-      mapLoadPromise = new Promise((resolve, reject) => {
-        const callbackName = "__tlknGoogleMapsReady";
-        const script = document.createElement("script");
-        let timeout;
-        const fail = (error) => {
-          clearTimeout(timeout);
-          delete window[callbackName];
-          reject(error);
-        };
-        timeout = setTimeout(() => fail(new Error("Google Maps API timed out")), 20000);
-        window[callbackName] = () => {
-          clearTimeout(timeout);
-          delete window[callbackName];
-          resolve(window.google.maps);
-        };
-        script.async = true;
-        script.src = "https://maps.googleapis.com/maps/api/js?" + new URLSearchParams({
-          key: window.GOOGLE_MAPS_API_KEY,
-          callback: callbackName,
-          language: "vi",
-          region: "VN",
-          loading: "async"
-        }).toString();
-        script.onerror = () => fail(new Error("Google Maps API failed to load"));
-        document.head.appendChild(script);
-      });
-    }
-    return mapLoadPromise;
-  }
-  function closeMapPopup() {
-    if (mapInfoWindow) mapInfoWindow.close();
-  }
-  function showMapPopup(entry) {
-    mapInfoWindow.setContent(entry.content);
-    mapInfoWindow.open({ map, anchor: entry.marker });
-  }
   function renderMap() {
-    const container = $("#map");
-    if (!window.google || !window.google.maps) {
-      if (!window.GOOGLE_MAPS_API_KEY) {
-        container.innerHTML = '<p class="empty">' + t("mapKeyMissing") + "</p>";
-        return;
-      }
-      container.innerHTML = '<p class="empty">' + t("mapLoading") + "</p>";
-      if (!mapLoadPromise) {
-        loadGoogleMaps().then(() => renderMap()).catch((error) => {
-          console.error(error);
-          container.innerHTML = '<p class="empty">' + t("mapLoadFail") + "</p>";
-        });
-      }
-      return;
-    }
+    if (!window.L) { $("#map").innerHTML = '<p class="empty">Map unavailable</p>'; return; }
     if (!map) {
-      map = new google.maps.Map(container, {
-        center: { lat: 21.031, lng: 105.851 },
-        zoom: 15,
-        mapTypeControl: false,
-        streetViewControl: false,
-        clickableIcons: false,
-        gestureHandling: "cooperative"
-      });
-      mapInfoWindow = new google.maps.InfoWindow({ maxWidth: 300 });
+      // Bản đồ chỉ hiển thị khu vực Hà Nội (không kéo/thu nhỏ ra ngoài).
+      const HANOI = L.latLngBounds([20.50, 105.25], [21.42, 106.05]);
+      map = L.map("map", { maxBounds: HANOI, maxBoundsViscosity: 1, minZoom: 10, maxZoom: 19, worldCopyJump: false }).setView([21.031, 105.851], 15);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { minZoom: 10, maxZoom: 19, bounds: HANOI, noWrap: true,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>' }).addTo(map);
+      layer = L.layerGroup().addTo(map);
     }
-    setTimeout(() => google.maps.event.trigger(map, "resize"), 50);
-    closeMapPopup();
-    new Set(Object.values(markerOf).map((entry) => entry.marker)).forEach((marker) => marker.setMap(null));
-    if (userMarker) userMarker.setMap(null);
-    userMarker = null;
-    markerOf = {};
+    setTimeout(() => map.invalidateSize(), 50);
+    layer.clearLayers(); markerOf = {};
     const groups = {}, date = state.day;
     state.data.events.forEach((ev) => {
       if (!matches(ev)) return;
@@ -375,65 +312,32 @@
     const pts = [];
     Object.values(groups).forEach((g) => {
       const anySaved = g.items.some((x) => isSaved(x.ev.id, date, x.sl.from));
-      const marker = new google.maps.Marker({
-        map,
-        position: { lat: g.v.lat, lng: g.v.lng },
-        title: g.v.name,
-        icon: {
-          path: google.maps.SymbolPath.CIRCLE,
-          scale: anySaved ? 11 : 8,
-          strokeColor: "#fff",
-          strokeWeight: 2,
-          fillColor: anySaved ? "#c8962e" : "#8f2a1c",
-          fillOpacity: .95
-        }
-      });
+      const m = L.circleMarker([g.v.lat, g.v.lng], { radius: anySaved ? 11 : 8, color: "#fff", weight: 2, fillOpacity: .95, fillColor: anySaved ? "#c8962e" : "#8f2a1c" });
       const li = g.items.slice(0, 12).map((x) => {
         const on = isSaved(x.ev.id, date, x.sl.from);
         return "<li><b>" + esc(titleOf(x.ev)) + "</b><br>" + esc(slotText(x.sl)) + ' <button class="btn small ' + (on ? "saved" : "primary") + '" data-save="' + esc(x.ev.id) +
           '" data-date="' + date + '" data-from="' + esc(x.sl.from || "") + '" data-to="' + esc(x.sl.to || "") + '">' + (on ? t("saved") : t("save")) + "</button></li>";
       }).join("");
-      const entry = {
-        marker,
-        content: '<div class="map-popup pop"><h4>📍 ' + esc(g.v.name) + "</h4><ul>" + li + '</ul><a target="_blank" rel="noopener" href="' + dirUrl(g.v) + '">' + t("directions") + " →</a></div>"
-      };
-      marker.addListener("click", () => showMapPopup(entry));
-      pts.push([g.v.lat, g.v.lng]);
-      g.items.forEach((x) => { markerOf[x.ev.id] = entry; });
+      m.bindPopup('<div class="pop"><h4>📍 ' + esc(g.v.name) + "</h4><ul>" + li + '</ul><a target="_blank" rel="noopener" href="' + dirUrl(g.v) + '">' + t("directions") + " →</a></div>", { maxWidth: 300, maxHeight: 260, autoPanPadding: [20, 20] });
+      m.addTo(layer); pts.push([g.v.lat, g.v.lng]);
+      g.items.forEach((x) => { markerOf[x.ev.id] = m; });
     });
-    if (state.here) {
-      userMarker = new google.maps.Marker({
-        map,
-        position: state.here,
-        title: t("here"),
-        icon: { path: google.maps.SymbolPath.CIRCLE, scale: 7, strokeColor: "#fff", strokeWeight: 2, fillColor: "#1f5f8b", fillOpacity: 1 }
-      });
-      userMarker.addListener("click", () => {
-        mapInfoWindow.setContent(t("here"));
-        mapInfoWindow.open({ map, anchor: userMarker });
-      });
-    }
+    if (state.here) { L.circleMarker([state.here.lat, state.here.lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#1f5f8b", fillOpacity: 1 }).bindPopup(t("here")).addTo(layer); }
     if (state.keepMapView) { state.keepMapView = false; return; }
-    const visiblePts = pts.filter((p) => p[0] > 20.99 && p[1] > 105.82);
-    if (visiblePts.length > 1) {
-      const bounds = new google.maps.LatLngBounds();
-      visiblePts.forEach((p) => bounds.extend({ lat: p[0], lng: p[1] }));
-      map.fitBounds(bounds, 30);
-      google.maps.event.addListenerOnce(map, "idle", () => { if (map.getZoom() > 16) map.setZoom(16); });
-    }
+    if (pts.length > 1) map.fitBounds(pts.filter((p) => p[0] > 20.99 && p[1] > 105.82), { padding: [30, 30], maxZoom: 16 });
   }
 
   function focusOnMap(id) {
-    const entry = markerOf[id]; if (!map || !entry) return false;
+    const m = markerOf[id]; if (!map || !m) return false;
     $$("#list .card.focus").forEach((c) => c.classList.remove("focus"));
     const c = document.getElementById("c-" + id); if (c) c.classList.add("focus");
-    closeMapPopup();
-    let done = false;
-    const open = () => { if (!done) { done = true; showMapPopup(entry); } };
-    map.panTo(entry.marker.getPosition());
-    if (map.getZoom() < 16) map.setZoom(16);
-    google.maps.event.addListenerOnce(map, "idle", open);
-    setTimeout(open, 700);
+    map.closePopup();
+    const ll = m.getLatLng(), z = Math.max(map.getZoom(), 16);
+    if (map.getCenter().distanceTo(ll) < 5 && map.getZoom() === z) { m.openPopup(); }
+    else {   // mở popup sau khi bay xong để popup tự canh vừa khung (có hẹn giờ dự phòng nếu trình duyệt bỏ lỡ sự kiện moveend)
+      let done = false; const open = () => { if (!done) { done = true; m.openPopup(); } };
+      map.once("moveend", open); setTimeout(open, 700); map.flyTo(ll, z, { duration: .5 });
+    }
     track("map-focus"); return true;
   }
 
@@ -755,13 +659,13 @@
   function renderAll() { applyI18n(); renderDays(); renderView(); renderSiteFeedback(); $("#mine-count").textContent = state.plan.length + state.custom.length; }
 
   function toggleSave(btn) {
-    if (btn.closest(".map-popup")) state.keepMapView = true;
+    if (btn.closest(".leaflet-popup")) state.keepMapView = true;
     const p = { id: btn.dataset.save, date: btn.dataset.date, from: btn.dataset.from || "", to: btn.dataset.to || "" };
     const i = state.plan.findIndex((x) => keyOf(x) === keyOf(p));
     if (i >= 0) { state.plan.splice(i, 1); toast(t("removedFrom", shortDay(p.date))); track("unsave"); }
     else { state.plan.push(p); toast(t("savedTo", shortDay(p.date))); track("save"); }
     saveMine(); renderView();
-    closeMapPopup();
+    if (map) map.closePopup();
   }
 
   function bind() {
@@ -857,7 +761,7 @@
     $("#agenda-link").href = f.agendaUrl || "#";
     loadMine(); bind(); applyI18n(); renderDays(); renderSiteFeedback(); $("#mine-count").textContent = state.plan.length + state.custom.length; $("#mine-count").classList.toggle("zero", !(state.plan.length + state.custom.length));
     setView("plan", true); runPlanner(null, true); checkShared();
-    wideMQ.addEventListener("change", () => { setView(state.view === "map" ? "list" : state.view, true); if (map) setTimeout(() => google.maps.event.trigger(map, "resize"), 60); });
+    wideMQ.addEventListener("change", () => { setView(state.view === "map" ? "list" : state.view, true); if (map) setTimeout(() => map.invalidateSize(), 60); });
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
   }
   init();

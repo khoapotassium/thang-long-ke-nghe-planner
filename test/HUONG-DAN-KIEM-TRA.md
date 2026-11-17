@@ -16,7 +16,6 @@ py .\test\test_chuc_nang.py
 py .\test\test_man_hinh_rong.py
 ```
 Kết quả: dòng ✓ là đạt, ✗ là lỗi, cuối cùng có "✅ Tất cả đều đạt". Ảnh chụp lưu trong `shots\`.
-Bài test dùng mock Google Maps nên không cần API key; bản web công khai lấy key từ secret `GOOGLE_MAPS_API_KEY` trong GitHub Actions. Nếu chưa có key, website vẫn deploy nhưng bản đồ tạm thời không khả dụng. Nếu bản đồ không tải, kiểm tra billing, Maps JavaScript API và referrer `https://khoapotassium.github.io/*` của key.
 Kiểm tra web đã đưa lên mạng:
 ```powershell
 $env:BASE = "https://<ten>.github.io/<repo>"
@@ -31,7 +30,7 @@ py .\test\test_chuc_nang.py
 4. Bấm **Đổi** ở một điểm: ra điểm khác. Bấm **Lưu**: số trên tab "Lịch của tôi" nảy lên.
 5. Bấm một tuyến mẫu: xếp ngay lịch theo tuyến đó.
 6. Tab **Sự kiện**: tìm "trien lam" (không dấu), lọc loại, "Đang mở", "Gần tôi" (cho phép vị trí, thấy khoảng cách). Mỗi thẻ có hình minh họa.
-7. Tab **Bản đồ**: có ghim, bấm ghim ra thông tin và nút Chỉ đường.
+7. Tab **Bản đồ**: có ghim, bấm ghim ra thông tin và nút Chỉ đường. Thu nhỏ hết cỡ và kéo ra xa: bản đồ dừng ở phạm vi Hà Nội.
 8. Tab **Lịch của tôi**: thêm điểm riêng (thử bỏ trống tên, thử giờ kết thúc sớm hơn giờ bắt đầu → phải báo lỗi); **Xuất .ics** rồi mở bằng Google/Apple Calendar, kiểm tra giờ đúng; **Chia sẻ** gửi link cho người khác mở: thấy banner và lịch (không có điểm riêng).
 9. Nút **EN/VI**: đổi toàn bộ chữ, tải lại vẫn nhớ.
 10. Tắt mạng, mở lại web: vẫn dùng được. Thêm ra màn hình chính: có icon Tháp Rùa.
