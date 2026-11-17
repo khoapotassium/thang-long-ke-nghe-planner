@@ -39,11 +39,10 @@ worker/                 Cloudflare Worker nhận góp ý
 
 ## Đưa lên GitHub Pages
 
-1. Tạo repo mới trên GitHub (Public), ví dụ `lich-ke-nghe`.
-2. Upload toàn bộ file (kéo thả trên GitHub web) → Commit.
-3. **Settings → Pages** → Source: *Deploy from a branch* → `main` / `/ (root)` → Save.
-4. Sau 1–2 phút: `https://<ten>.github.io/lich-ke-nghe/`
-5. Sửa `og:image` trong `index.html` thành URL tuyệt đối:  
+1. Tạo repo Public và push project lên nhánh `main`.
+2. Workflow `Deploy GitHub Pages` tự chạy mỗi khi push. Nếu GitHub yêu cầu chọn nguồn lần đầu, vào **Settings → Pages** và chọn **GitHub Actions**.
+3. Sau khi workflow hoàn tất, web ở `https://<ten>.github.io/<repo>/`.
+4. Sửa `og:image` trong `index.html` thành URL tuyệt đối:  
    `https://<ten>.github.io/lich-ke-nghe/og-image.png`
 
 ## Thiết lập GoatCounter (đo lường – miễn phí, không cookie)
