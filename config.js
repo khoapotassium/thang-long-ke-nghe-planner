@@ -6,7 +6,7 @@ window.APP_CONFIG = {
 
   // Địa chỉ Cloudflare Worker nhận góp ý, ví dụ "https://tlkn-feedback.tenban.workers.dev/feedback"
   // Để trống = ô góp ý sẽ hướng người dùng sang bình luận trên Threads
-  feedbackEndpoint: "",
+  feedbackEndpoint: "https://tlkn-feedback.khoapotassium.workers.dev/feedback",
 
   // Link bài Threads của bạn (để người dùng bình luận góp ý)
   threadsUrl: "",

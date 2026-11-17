@@ -1,0 +1,11 @@
+name = "tlkn-feedback"
+main = "worker/feedback-worker.js"
+compatibility_date = "2026-11-17"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "FEEDBACK_KV"
+id = "3d046d2e77de4aedb06732a30fbcbb39"
+
+[vars]
+ALLOWED_ORIGIN = "https://khoapotassium.github.io"
