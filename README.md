@@ -24,5 +24,8 @@ Trang web cộng đồng, không chính thức, giúp khám phá hoạt động 
 - Đo lường truy cập và gửi góp ý là các tích hợp tùy chọn, cấu hình trong `config.js`.
 - Xem [Chính sách quyền riêng tư](privacy.html) để biết thêm chi tiết.
 
+## Triển khai
+
+GitHub Pages cần secret Actions `GOOGLE_MAPS_API_KEY` cho Maps JavaScript API. Bật billing, giới hạn key cho Maps JavaScript API và referrer `https://khoapotassium.github.io/*`; workflow chỉ chèn key khi deploy, không lưu key trong mã nguồn.
 
 Dữ liệu sự kiện thuộc website/agenda của Ban tổ chức. Dự án cộng đồng này không liên kết hay được Ban tổ chức chứng thực.
