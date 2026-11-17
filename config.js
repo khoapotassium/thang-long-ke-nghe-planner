@@ -7,7 +7,7 @@ window.APP_CONFIG = {
   feedbackEndpoint: "https://tlkn-feedback.khoapotassium.workers.dev/feedback",
 
   // Liên kết Threads dùng cho góp ý.
-  threadsUrl: "",
+  threadsUrl: "https://www.threads.com/share/HvAz8WC81/",
 
   // Thông tin liên hệ trên trang quyền riêng tư.
   contact: "vietkhoa.dvk@gmail.com"
