@@ -1,0 +1,44 @@
+{
+ "apiSource": "snapshot-2026-11-17",
+ "newApiEvents": [],
+ "suppressedExtras": [],
+ "unusedOverrides": [],
+ "venuesWithoutCoords": [
+  {
+   "key": "complex01",
+   "name": "COMPLEX 01"
+  },
+  {
+   "key": "d-hanh-tich",
+   "name": "Đình Hành Tích"
+  },
+  {
+   "key": "d-hoa-loc-thi",
+   "name": "Đình Hoa Lộc Thị"
+  },
+  {
+   "key": "d-pha-truc-lam",
+   "name": "Đình Phả Trúc Lâm"
+  },
+  {
+   "key": "d-tu-thi",
+   "name": "Đình Tú Thị"
+  },
+  {
+   "key": "d-vu-thach",
+   "name": "Đình Vũ Thạch"
+  },
+  {
+   "key": "dinh-pho-co",
+   "name": "Các đình, di tích trong phố cổ"
+  },
+  {
+   "key": "dong-mo",
+   "name": "Làng Văn hóa – Du lịch các dân tộc Việt Nam"
+  }
+ ],
+ "warnings": [
+  "dem-nhac-muong-am-vang-xu-muong: giờ kết thúc trước giờ bắt đầu trong API"
+ ],
+ "generatedAt": "2026-11-17T09:21+07:00"
+}

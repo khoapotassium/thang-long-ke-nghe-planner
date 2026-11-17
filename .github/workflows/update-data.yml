@@ -1,0 +1,42 @@
+name: Cập nhật dữ liệu sự kiện
+
+# Chạy 2 lần mỗi ngày: 06:17 và 17:17 giờ Việt Nam (cron dùng giờ UTC)
+on:
+  schedule:
+    - cron: "17 23 * * *"
+    - cron: "17 10 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Lấy API của BTC và gộp với agenda
+        run: python3 scripts/build_events.py
+
+      - name: Commit nếu dữ liệu sự kiện thay đổi
+        run: |
+          # build-report.json và generatedAt đổi mỗi lần chạy; chỉ commit khi danh sách sự kiện thật sự khác
+          if git diff --quiet -I '"generatedAt"' -- data/events.json data-src/api-cache.json; then
+            echo "Không có thay đổi."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json data/build-report.json data-src/api-cache.json
+          git commit -m "Cập nhật dữ liệu sự kiện $(TZ=Asia/Ho_Chi_Minh date '+%d/%m %H:%M')"
+          git push

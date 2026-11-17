@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quyền riêng tư · Thăng Long Kẻ Nghệ Planner</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0f1729;color:#c8d4f0;line-height:1.7;padding:0 1rem 4rem}
+.wrap{max-width:720px;margin:0 auto}
+header{padding:1.5rem 0 1rem;border-bottom:1px solid #2a3560;margin-bottom:2rem}
+header a{color:#a0b0d8;text-decoration:none;font-size:.9rem}
+header a:hover{color:#ffdc64}
+h1{font-size:1.5rem;color:#ffdc64;margin:.5rem 0 .25rem}
+.sub{color:#7a90c0;font-size:.85rem}
+h2{font-size:1.05rem;color:#8bb4ff;margin:2rem 0 .5rem;border-left:3px solid #3a5090;padding-left:.75rem}
+p{margin:.4rem 0}
+ul{margin:.4rem 0 .4rem 1.5rem}
+li{margin:.2rem 0}
+.lang-toggle{float:right;background:#1e2952;border:1px solid #3a5090;color:#a0b0d8;padding:.3rem .8rem;border-radius:6px;cursor:pointer;font-size:.85rem}
+.lang-toggle:hover{background:#2a3a70;color:#ffdc64}
+.wipe-btn{display:inline-block;margin-top:1.5rem;background:#3a1515;border:1px solid #702020;color:#ff8080;padding:.6rem 1.2rem;border-radius:8px;cursor:pointer;font-size:.9rem}
+.wipe-btn:hover{background:#501a1a}
+.contact{margin-top:.5rem;color:#7a90c0;font-size:.85rem}
+.note{background:#1a2448;border:1px solid #2a3a60;border-radius:8px;padding:.75rem 1rem;font-size:.85rem;color:#8a9cc0;margin:1rem 0}
+/* lang */
+[data-lang]{display:none}
+body.vi div[data-lang=vi]{display:block}
+body.en div[data-lang=en]{display:block}
+span[data-lang]{display:none!important}
+body.vi span[data-lang=vi]{display:inline!important}
+body.en span[data-lang=en]{display:inline!important}
+</style>
+</head>
+<body class="vi">
+<div class="wrap">
+<header>
+  <button class="lang-toggle" onclick="toggleLang()">EN / VI</button>
+  <a href="index.html">← <span data-lang="vi">Về trang chính</span><span data-lang="en">Back to main</span></a>
+  <h1>🔒 <span data-lang="vi">Quyền riêng tư</span><span data-lang="en">Privacy Policy</span></h1>
+  <p class="sub">Thăng Long Kẻ Nghệ Planner &nbsp;·&nbsp; <span data-lang="vi">Cập nhật</span><span data-lang="en">Updated</span>: 17/11/2026</p>
+</header>
+
+<!-- VIETNAMESE -->
+<div data-lang="vi">
+  <div class="note">
+    Web này là dự án <strong>cá nhân, không chính thức</strong>, không có pháp nhân và không thu phí.
+    Chúng tôi cố gắng hết sức để bảo vệ sự riêng tư của bạn theo tinh thần của
+    Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP (hiệu lực 1/1/2026).
+  </div>
+
+  <h2>1. Dữ liệu chúng tôi <em>không</em> thu thập</h2>
+  <ul>
+    <li>Không thu tên, email, số điện thoại hay bất kỳ thông tin định danh nào.</li>
+    <li>Không dùng cookie theo dõi.</li>
+    <li>Không có tài khoản đăng nhập.</li>
+  </ul>
+
+  <h2>2. Dữ liệu lưu trên máy bạn (localStorage)</h2>
+  <p>Lịch đã lưu, điểm địa điểm riêng và tùy chọn ngôn ngữ chỉ được lưu trong <strong>trình duyệt của bạn</strong> (localStorage). Dữ liệu này không bao giờ rời máy bạn, chúng tôi không nhìn thấy và không thể truy cập.</p>
+  <p>Bạn có thể xóa toàn bộ bất cứ lúc nào bằng nút bên dưới hoặc nút "Xóa dữ liệu trên máy này" ở cuối trang chính.</p>
+
+  <h2>3. Vị trí địa lý</h2>
+  <p>Tính năng "Sự kiện gần tôi" chỉ sử dụng tọa độ <strong>trực tiếp trên máy bạn</strong> để tính khoảng cách. Tọa độ không được gửi đến bất kỳ máy chủ nào. Trình duyệt sẽ hỏi xác nhận trước khi chia sẻ vị trí.</p>
+
+  <h2>4. Góp ý</h2>
+  <p>Nếu bạn gửi góp ý qua form trên web, nội dung được chuyển tới Cloudflare Worker và lưu tạm thời (tối đa đến 31/12/2026). Chúng tôi <strong>không lưu địa chỉ IP</strong> của bạn. Số điện thoại và email (nếu vô tình nhập vào nội dung) sẽ bị che trước khi lưu (thay bằng <code>[sđt]</code>, <code>[email]</code>) ngay trên máy bạn, trước khi gửi đi.</p>
+  <p>Nếu không có máy chủ góp ý, form sẽ chuyển hướng bạn sang Threads.</p>
+
+  <h2>5. Đo lường lượt truy cập (GoatCounter)</h2>
+  <p>Chúng tôi sử dụng <a href="https://www.goatcounter.com" target="_blank" rel="noopener" style="color:#8bb4ff">GoatCounter</a> để đếm lượt xem trang — <strong>không dùng cookie</strong>, không lưu địa chỉ IP đầy đủ, không xây dựng hồ sơ cá nhân. Dữ liệu chỉ bao gồm: URL trang, loại trình duyệt/thiết bị, quốc gia (ước lượng từ IP, không lưu IP). Xem chính sách của GoatCounter tại <a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener" style="color:#8bb4ff">goatcounter.com/help/privacy</a>.</p>
+
+  <h2>6. Bên thứ ba có thể thấy IP của bạn</h2>
+  <ul>
+    <li><strong>GitHub Pages</strong>: lưu trữ web này. GitHub có thể ghi log IP theo chính sách của họ.</li>
+    <li><strong>OpenStreetMap</strong>: cung cấp bản đồ nền. Các tile bản đồ được tải từ máy chủ OSM và OSM có thể thấy IP.</li>
+  </ul>
+  <p>Chúng tôi không kiểm soát chính sách của các bên trên.</p>
+
+  <h2>7. Quyền của bạn</h2>
+  <p>Vì chúng tôi không lưu thông tin định danh, hầu hết quyền theo Luật 91/2025 (truy cập, chỉnh sửa, xóa) đã được thực hiện ngay tại máy bạn. Với dữ liệu góp ý ẩn danh, bạn có thể liên hệ để yêu cầu xóa nếu biết thời điểm gửi.</p>
+
+  <h2>8. Liên hệ</h2>
+  <p class="contact">Liên hệ: <span class="contact-val">qua bài Threads giới thiệu web</span></p>
+
+  <button class="wipe-btn" onclick="wipeData()">🗑 Xóa toàn bộ dữ liệu trên máy này</button>
+  <p class="wiped-msg contact" hidden>✓ Đã xóa toàn bộ dữ liệu trên máy này.</p>
+</div>
+
+<!-- ENGLISH -->
+<div data-lang="en">
+  <div class="note">
+    This is a <strong>personal, unofficial</strong> project with no legal entity and no fee.
+    We follow the spirit of Vietnam's Personal Data Protection Law (Law 91/2025/QH15) and Decree 356/2025 (effective 1 Jan 2026).
+  </div>
+
+  <h2>1. Data we do <em>not</em> collect</h2>
+  <ul>
+    <li>No name, email, phone number or any identifying information.</li>
+    <li>No tracking cookies.</li>
+    <li>No user accounts.</li>
+  </ul>
+
+  <h2>2. Data stored on your device (localStorage)</h2>
+  <p>Your saved schedule, custom places and language preference are stored only in <strong>your browser</strong> (localStorage). This data never leaves your device; we cannot see or access it.</p>
+  <p>You can delete everything at any time using the button below or the "Delete data on this device" link at the bottom of the main page.</p>
+
+  <h2>3. Location</h2>
+  <p>The "Events near me" feature uses your coordinates <strong>locally on your device</strong> to calculate distances. Coordinates are never sent to any server. Your browser will ask for permission before sharing your location.</p>
+
+  <h2>4. Feedback</h2>
+  <p>If you submit feedback via the form, it is sent to a Cloudflare Worker and stored temporarily (until 31 Dec 2026 at the latest). We do <strong>not store your IP address</strong>. Phone numbers and email addresses accidentally included in the message are masked before saving (replaced by <code>[sđt]</code>, <code>[email]</code>) on your device before sending.</p>
+  <p>If no feedback server is configured, the form redirects you to Threads.</p>
+
+  <h2>5. Analytics (GoatCounter)</h2>
+  <p>We use <a href="https://www.goatcounter.com" target="_blank" rel="noopener" style="color:#8bb4ff">GoatCounter</a> to count page views — <strong>no cookies</strong>, no full IP stored, no personal profiles. Data includes only: page URL, browser/device type, country (estimated from IP, IP not stored). See GoatCounter's policy at <a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener" style="color:#8bb4ff">goatcounter.com/help/privacy</a>.</p>
+
+  <h2>6. Third parties that may see your IP</h2>
+  <ul>
+    <li><strong>GitHub Pages</strong>: hosts this website. GitHub may log IPs per their own policy.</li>
+    <li><strong>OpenStreetMap</strong>: provides map tiles. OSM servers may see your IP when loading map tiles.</li>
+  </ul>
+  <p>We do not control the policies of these parties.</p>
+
+  <h2>7. Your rights</h2>
+  <p>Because we store no identifying information, most rights under Law 91/2025 (access, correction, deletion) are already exercised directly on your device. For anonymous feedback data, you may contact us to request deletion if you know when you submitted it.</p>
+
+  <h2>8. Contact</h2>
+  <p class="contact">Contact: <span class="contact-val">via the Threads post announcing this site</span></p>
+
+  <button class="wipe-btn" onclick="wipeData()">🗑 Delete all data on this device</button>
+  <p class="wiped-msg contact" hidden>✓ All data on this device has been deleted.</p>
+</div>
+
+</div><!-- .wrap -->
+<script src="config.js"></script>
+<script>
+function toggleLang(){
+  document.body.classList.toggle('vi');
+  document.body.classList.toggle('en');
+  document.documentElement.lang=document.body.classList.contains('en')?'en':'vi';
+}
+function wipeData(){
+  try{Object.keys(localStorage).filter(k=>k.startsWith('tlkn-')).forEach(k=>localStorage.removeItem(k));}catch(e){}
+  if('caches' in window){
+    caches.keys().then(ns=>ns.forEach(n=>caches.delete(n)));
+  }
+  document.querySelectorAll('.wiped-msg').forEach(e=>e.hidden=false);
+}
+// Liên hệ lấy từ config.js
+try{
+  const c=(window.APP_CONFIG||{}).contact;
+  if(c){document.querySelectorAll('.contact-val').forEach(el=>{
+    el.textContent='';
+    if(/^https?:\/\//.test(c)){const a=document.createElement('a');a.href=c;a.target='_blank';a.rel='noopener';a.style.color='#8bb4ff';a.textContent=c;el.appendChild(a);}
+    else if(/@/.test(c)){const a=document.createElement('a');a.href='mailto:'+c;a.style.color='#8bb4ff';a.textContent=c;el.appendChild(a);}
+    else el.textContent=c;
+  });}
+}catch(e){}
+// Sync lang with main app
+try{
+  const l=localStorage.getItem('tlkn-lang');
+  if(l==='en'){document.body.classList.remove('vi');document.body.classList.add('en');}
+}catch(e){}
+</script>
+</body>
+</html>

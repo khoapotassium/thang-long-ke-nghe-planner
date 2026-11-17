@@ -1,0 +1,118 @@
+0|gala-be-mac-ha-noi-nhung-vang-dong|Event, Performance|2611281200|2611281400|0|Gala bế mạc “Hà Nội Những Vang Động”
+1|trao-doi-chuyen-mon-lao-dong-sang-tao-trong-boi-canh-phat-trien-cong-nghiep-van-hoa|Talk|2611280100|2611280500|1|Trao đổi chuyên môn "Lao động sáng tạo trong bối cảnh phát triển Công nghiệp văn hóa"
+2|workshop-cho-phien-thuoc-du-an-to-mo-chuyen-tro|Workshop|2611280100|2611280500|2|Workshop "Chợ phiên" thuộc dự án "Tò mò chuyện Trò"
+3|no-phone-reading-party-05-ken-moi|Community|2611272330|2611280230|0|No-phone Reading Party #05 "KÉN MỚI"
+4|trao-doi-chuyen-mon-nghe-thiet-ke-trong-kinh-te-sang-tao|Talk|2611270600|2611271000|3|Trao đổi chuyên môn "Nghề thiết kế trong kinh tế sáng tạo"
+5|cai-luong-duong-dai-van-vay-ma-khac-new-ideas-don-t-exist-only-new-ways-to-feel-them|Performance|2611261300|2611261430|4|Cải lương đương đại “Vẫn vậy, mà khác” (New Ideas Don't Exist, Only New Ways to Feel Them)
+6|lop-thuc-hanh-nghe-sau|Workshop|2611251000|2611261200|0|Lớp thực hành "Nghe sâu"
+7|mua-roi-duong-dai-pha-roi-puppet-slam-hanoi|Performance|2611241300|2611251430|5|Múa rối đương đại “Phá Rối” (Puppet Slam Hanoi)
+8|ngay-di-san-sis-2026|Community|2611240200|2611231700|6|Ngày Di sản SIS 2026
+9|trinh-dien-am-thanh-truyen-o-chan-troi-mo-mo-su-kien|Performance|2611231300|2611231400|4|Trình diễn âm thanh “Truyện ở chân trời mờ, mơ sự kiện”
+10|trinh-dien-troi|Performance|2611221300|2611221500|1|Trình diễn “Trôi”
+11|street-jazz|Performance|2611221300|2611291600|6|Street Jazz
+12|trao-doi-chuyen-mon-co-vat-chuyen-dong|Talk|2611220700|2611221000|1|Trao đổi chuyên môn "Cổ vật chuyển động"
+13|trinh-dien-dong-song-qua-vang|Performance|2611220400|2611220900|0|Trình diễn "Dòng sông quá vãng"
+14|trao-doi-chuyen-mon-di-san-tu-sinh|Talk|2611220300|2611220430|1|Trao đổi chuyên môn "Di sản tự sinh"
+15|trao-doi-chuyen-mon-trinh-dien-tho-vuot-qua-duong-bien-chu|Talk|2611220200|2611220500|3|Trao đổi chuyên môn "Trình diễn thơ - Vượt qua đường biên chữ"
+16|dem-nhac-reggae-cung-best-friend-band|Performance|2611211400|2611211600|6|Đêm nhạc Reggae cùng Best Friend Band
+17|mua-duong-dai-nass|Performance|2611211300|2611211440|7|Múa đương đại “Näss”
+18|kich-tuong-tac-muoi-thuong|Performance|2611211000|2611221200|0|Trình  tương tác "mười thương"
+19|chieu-phim-va-giao-luu-ve-nghe-thuat-bieu-dien-truyen-thong|Performance, Talk|2611210800|2611271430|6|Chiếu phim và Giao lưu về Nghệ thuật biểu diễn truyền thống
+20|talkshow-ket-hop-workshop-lam-mau-co-ly|Event|2611210730|2611211000|6|Talkshow kết hợp workshop "Làm màu có lý"
+21|nhiep-anh-bang-uot-pop-up-studio|Exhibition|2611210300|2611270700|6|Nhiếp ảnh bảng ướt Pop-up Studio
+22|nghe-nghe-art-salon-mau-xua-sac-nay|Exhibition|2611210300|2611281300|6|Nghề Nghệ Art Salon "Màu xưa, Sắc nay"
+23|the-hop-spot-bia-thu-cong-va-am-thuc-dia-phuong|Community|2611210300|2611221500|6|The HOP Spot: Bia thủ công và ẩm thực địa phương
+24|workshop-in-anh-cyanotype|Workshop|2611210230|2611220500|6|Workshop in ảnh Cyanotype
+25|le-hoi-xe-va-dam-me-2026|Event|2611210200|2611220300|6|Lễ hội xe và đam mê 2026
+26|ha-noi-mo-2-thanh-pho-khong-le|Community|2611210200|2611281300|6|Hà Nội Mở 2 "Thành phố không lề"
+27|workshop-in-tranh-moc-ban-12-con-giap|Workshop|2611210200|2611221000|2|Workshop in tranh Mộc Bản 12 con giáp
+28|workshop-ve-tranh-lua-truyen-thong|Workshop|2611210200|2611220430|2|Workshop "Vẽ tranh lụa truyền thống"
+29|workshop-2-buoi-mau-cua-la-du-an-giao-duc-nghe-thuat-pai-the-living-city|Workshop|2611210130|2611220930|2|Workshop 2 buổi "Màu của lá", Dự án giáo dục nghệ thuật PAI: The Living City
+30|kich-mua-duong-dai-doi-dien-voi-vo-cung|Performance|2611201300|2611201430|8|Kịch múa đương đại “Đối diện với vô cùng”
+31|dem-re-imagine-x-fustic|Performance|2611201130|2611201330|6|Lotte Art Week Gala và trình diễn: 'Thap:sang - Hoà Thanh | Violinist Nguyễn Thiện Minh và Fustic. Studio
+32|trinh-dien-duong-dai-tron-tru-trong-chieu-chap-choang|Performance|2611201000|2611201200|0|Trình diễn đương đại "Trơn tru trong chiều chập choạng"
+33|workshop-tranh-hang-trong-cat-ghep|Workshop|2611200700|2611270430|2|Workshop "Tranh Hàng Trống: Cắt & Ghép"
+34|trien-lam-ha-noi-qua-net-ve-nhung-goc-nhin-sang-tao-giao-thoa|Exhibition|2611200200|2611201100|6|Triển lãm "Hà Nội qua nét vẽ: Những góc nhìn sáng tạo giao thoa"
+35|trien-lam-tho-con-chim-tu-nui-la|Exhibition|2611200200|2611281100|6|Triển lãm thơ "Con chim từ núi lạ"
+36|trinh-dien-hoa-giay-dung-dua|Performance|2611200100|2611191700|0|Trình diễn "Hoa giấy đung đưa"
+37|lop-thuc-hanh-trinh-dien-doc-va-nghe-sau|Community|2611190700|2611190900|6|Lớp thực hành "Trình diễn đọc và nghe sâu"
+38|dien-da-gio-gio-may-may|Event|2611190000|2611191330|9|Điền dã “Gió Gió Mây Mây”
+39|mua-duong-dai-thu-huong|Performance|2611181300|2611181400|0|Múa đương đại “Thu Hương”
+40|lop-thuc-hanh-nimamea-a-tuikakala-nghe-thuat-thiet-ke-hoa|Workshop|2611180700|2611181000|0|Lớp thực hành "Nimamea’a Tuikakala: Nghệ thuật thiết kế hoa"
+41|trao-doi-chuyen-mon-khao-khat-nguyen-ban|Talk|2611180700|2611181000|10|Trao đổi chuyên môn "Khao Khát Nguyên Bản"
+42|ve-ki-hoa-da-chat-lieu-cung-hwa|Workshop|2611180700|2611181000|11|Vẽ kí họa đa chất liệu cùng HWA
+43|trao-doi-chuyen-mon-cho-dong-xuan-tu-di-san-ke-cho-den-mo-hinh-to-hop-kinh-doanh-sang-tao|Talk|2611180200|2611180500|0|Trao đổi chuyên môn "Chợ Đồng Xuân: Từ di sản Kẻ Chợ đến mô hình Tổ hợp kinh doanh sáng tạo"
+44|trinh-dien-am-nhac-x-toa-dam-ong-bay-flight-of-the-bumblebee-ii|Performance|2611171230|2611171310|5|Trình diễn âm nhạc x Toạ đàm “Ong Bay” (Flight of the Bumblebee II)
+45|lop-thuc-hanh-thu-nghiem-am-thanh|Workshop|2611170700|2611170800|0|Lớp thực hành "Lắng nghe sâu"
+46|trien-lam-song-cung-dong-song-tuyen-duong-sinh-thai-song-hong|Exhibition|2611170200|2612131100|6|Triển lãm "Sống cùng dòng sông: Tuyến đường sinh thái sông Hồng"
+47|trien-lam-noi-mien-sang-tao|Exhibition|2611170130|2611281300|6|Triển lãm "Nối miền Sáng tạo"
+48|le-trao-giai-cuoc-thi-thiet-ke-khong-gian-sang-tao-2026-chu-de-ha-noi-danh-thuc-khong-gian-do-thi|Event|2611160700|2611161000|6|Lễ trao giải Cuộc thi Thiết kế Không gian Sáng tạo 2026, chủ đề "Hà Nội: Đánh thức không gian đô thị"
+49|trao-doi-chuyen-mon-ban-tron-nghe-thuat-lien-nganh-ket-noi-thuc-hanh-sang-tao-voi-chien-luoc-dao-tao-duong-dai|Talk|2611160700|2611161000|6|Tọa đàm: Nghệ thuật liên ngành – Kết nối thực hành sáng tạo với chiến lược đào tạo đương đại
+50|trien-lam-theo-buoc-di-san-cong-dong-2026|Exhibition|2611160200|2611281000|2|Triển lãm "Theo bước di sản cộng đồng 2026"
+51|chuoi-culture-show-xam-ca-tru|Performance|2611151300|2611271400|6|Chuỗi Culture Show: Xẩm, Ca trù
+52|tac-pham-choi-cho|Performance|2611151300|2611151430|0|Tác phẩm “Chơi Chợ”
+53|lop-thuc-hanh-cat-giay-the-gioi-dong-thuc-vat-tuong-lai|Workshop|2611150700|2611151000|0|Lớp thực hành cắt giấy "Thế giới Động thực vật Tương lai"
+54|chuoi-gap-nghe-si-trien-lam-mach-song-vo-hinh|Event|2611150700|2611220900|6|Chuỗi "Gặp nghệ sĩ" triển lãm "Mạch sống vô hình"
+55|trinh-dien-am-nhac-thieu-nhi-vu-khuc-gieo-nhip|Performance|2611150400|2611150500|12|Trình diễn Âm nhạc Thiếu nhi "Vũ Khúc Gieo Nhịp"
+56|tour-nghe-thuat-cham-dong-xuan|Tour|2611150300|2611220500|0|Tour Nghệ thuật "Chạm Đồng Xuân"
+57|chuoi-workshop-van-o-day|Workshop|2611150200|2611220245|11|Chuỗi workshop "Vẫn Ở Đây"
+58|workshop-nhuom-khan-lua-to-tam-mau-cua-nang|Workshop|2611150200|2611151030|2|Workshop nhuộm khăn lụa tơ tằm "Màu của nắng"
+59|le-trao-giai-giai-thuong-loa-thanh-2026|Event|2611150130|2611150330|12|Lễ trao giải Giải thưởng Loa Thành 2026
+60|trung-bay-nghe-det-va-san-pham-lua-truyen-thong|Exhibition|2611150100|2611281500|2|Trưng bày nghề dệt và sản phẩm lụa truyền thống
+61|trien-lam-ven-lop-hoa-diep|Exhibition|2611150100|2611281300|2|Triển lãm "Vén Lớp Hoạ Điệp"
+62|dem-nhac-muong-am-vang-xu-muong|Performance|2611141200|2611140130|12|Trình diễn "Âm nhạc xứ Mường"
+63|trinh-dien-tieng-xua-vong-pho|Performance|2611140330|2611140500|12|Trình diễn "Tiếng Xưa Vọng Phố"
+64|workshop-trong-vuon-hoa-hang-trong|Workshop|2611140300|2611211700|2|Workshop "Trong vườn hoa Hàng Trống"
+65|trien-lam-mach-song-vo-hinh|Exhibition|2611140300|2611281300|13|Triển lãm "Mạch sống vô hình"
+66|tac-pham-sap-dat-cot-dien-mainstream|Exhibition|2611140300|2611281100|0|Tác phẩm sắp đặt "Cột Điện Mainstream"
+67|trien-lam-nghe-thuat-cham-dong-xuan|Exhibition|2611140300|2611281100|0|Triển lãm nghệ thuật "Chạm Đồng Xuân"
+68|hoi-cho-nghe-nghe|Event, Community|2611140230|2611151400|13|Hội chợ "Nghề Nghệ"
+69|trien-lam-chuyen-dinh-vu-thach|Exhibition|2611140200|2611281000|2|Triển lãm "Chuyện Đình Vũ Thạch"
+70|trien-lam-chuyen-dinh-pha-truc-lam|Exhibition|2611140200|2611281000|2|Triển lãm "Chuyện Đình Phả Trúc Lâm"
+71|tour-di-san-chuyen-dinh-trong-pho|Tour|2611140200|2611280700|2|Tour di sản "Chuyện Đình Trong Phố"
+72|trien-lam-doi-thoai-voi-tranh-hang-trong|Event|2611140200|2611281000|2|Triển lãm "Đối thoại với tranh Hàng Trống"
+73|trien-lam-chuyen-dinh-tu-thi|Exhibition|2611140200|2611281000|2|Triển lãm "Chuyện Đình Tú Thị"
+74|trien-lam-chuyen-pho-nghe-dong-nam-duoc-lan-ong|Exhibition|2611140200|2611281000|2|Triển lãm "Chuyện phố nghề Đông Nam Dược Lãn Ông"
+75|trien-lam-chuyen-dinh-hanh-tich|Exhibition|2611140200|2611281000|2|Triển lãm "Chuyện Đình Hành Tích"
+76|trien-lam-chuyen-dinh-hoa-loc-thi|Workshop|2611140200|2611281000|2|Triển lãm "Chuyện Đình Hoa Lộc Thị"
+77|trien-lam-chuyen-dinh-kim-ngan|Exhibition|2611140200|2611281000|2|Triển lãm "Chuyện Đình Kim Ngân"
+78|trien-lam-chuyen-dinh-xuan-phien-thi|Exhibition|2611140200|2611281000|2|Triển lãm "Chuyện Đình Xuân Phiến Thị"
+79|trien-lam-chuyen-dinh-yen-thai|Workshop|2611140200|2611281000|2|Triển lãm "Chuyện Đình Yên Thái"
+80|workshop-sac-quat-chang-son|Workshop|2611140200|2611210330|2|Workshop "Sắc Quạt Chàng Sơn"
+81|workshop-tranh-khac-go|Workshop|2611140200|2611281000|2|Workshop Tranh khắc gỗ
+82|trien-lam-chuyen-dinh-ha-vi|Exhibition|2611140200|2611281000|2|Triển lãm "Chuyện Đình Hà Vĩ"
+83|workshop-trai-nghiem-son-mai|Workshop|2611140200|2611281000|2|Workshop Trải nghiệm sơn mài
+84|sap-dat-am-thanh-thap-an-ca-the-tower-of-hidden-songs|Exhibition|2611140200|2611251500|14|Sắp đặt âm thanh “Tháp Ẩn Ca” (The Tower of Hidden Songs)
+85|pavilion-ken|Pavilion|2611140200|2611281100|11|Pavilion "Kén"
+86|trung-tam-thien-nhien-luu-dong|Community|2611140200|2611221500|11|Trung tâm Thiên nhiên Lưu động
+87|trien-lam-cong-doai-lang-duong-lam|Exhibition|2611140200|2611281100|11|Triển lãm "Cổng Đoài Làng Đường Lâm"
+88|trien-lam-chat-xua-chuyen-moi|Exhibition|2611140200|2611281100|11|Triển lãm "Chất Xưa, Chuyện Mới"
+89|tac-pham-ca-phe-trung-thuoc-du-an-ngo-ngang-ha-noi|Exhibition|2611140200|2611281600|12|Tác phẩm "Cà Phê Trứng" thuộc Dự án "Ngỡ ngàng Hà Nội"
+90|pavilion-kien-truc-va-nghe-thuat-art-hanoi-2026|Pavilion|2611140200|2611281200|13|Pavilion Kiến trúc và Nghệ Thuật Art Hanoi 2026
+91|chuoi-hoat-dong-mui-theu-ke-nghe|Workshop|2611140200|2611281200|6|Chuỗi hoạt động "Mũi Thêu Kẻ Nghệ"
+92|tac-pham-tri-am-thuoc-du-an-ngo-ngang-ha-noi|Exhibition|2611140200|2611281600|6|"Tác phẩm "Tri Âm" thuộc Dự án "Ngỡ ngàng Hà Nội"
+93|khai-mac-khu-trung-bay-khong-gian-sang-tao-di-san-pho-ha-noi-trao-giai-cuoc-thi-sang-tao-ip-van-hoa-tu-di-san-van-hoa-phi-vat-the-pho-ha-noi|Event|2611140130|2611140900|6|Khai mạc khu trưng bày không gian sáng tạo di sản Phở Hà Nội, trao giải Cuộc thi Sáng tạo IP văn hóa từ di sản văn hóa phi vật thể "Phở" Hà Nội
+94|chuong-trinh-trai-nghiem-tuyen-duong-sinh-thai-bo-vo-song-hong|Community|2611140100|2611271000|6|Chương trình trải nghiệm "Tuyến đường sinh thái bờ vở sông Hồng"
+95|sap-dat-xe-va-dam-me|Exhibition|2611140100|2611151500|13|Sắp đặt "Xe và đam mê"
+96|trung-bay-lang-nghe-son-dong-van-hoa-tra-viet-va-viet-phuc|Exhibition, Community|2611140100|2611281030|2|Trưng bày làng nghề Sơn Đồng
+97|chuoi-su-kien-di-san-chuyen-tuong-xua-chuyen-tuong-nay|Event|2611140100|2611281030|2|Chuỗi sự kiện di sản "Chuyện Tuồng xưa, Chuyện Tuồng nay"
+98|trien-lam-to-nghe-va-danh-nho-nuoc-viet|Exhibition|2611140100|2611281000|2|Triển lãm "Tổ nghề và Danh Nho nước Việt"
+99|trung-bay-cham-di-san-sang-tao-cung-son-mai|Exhibition|2611140100|2611281000|2|Trưng bày "Chạm di sản - Sáng tạo cùng sơn mài"
+100|trung-bay-nghe-thuat-gioi-thieu-san-pham-theu-cua-nghe-nhan-nguyen-thi-hang-ket-hop-cac-hoat-dong-trai-nghiem|Exhibition|2611140100|2611281000|2|Trưng bày nghệ thuật giới thiệu sản phẩm thêu của nghệ nhân Nguyễn Thị Hằng, kết hợp các hoạt động trải nghiệm
+101|trien-lam-chuyen-dinh-co-vu|Workshop|2611131700|2611271700|2|Triển lãm "Chuyện Đình Cổ Vũ"
+102|le-khai-mac-chuong-trinh-nghe-thuat-thang-long-ke-nghe-1|Performance, Event|2611131030|2611131215|12|Lễ khai mạc, chương trình nghệ thuật “Thăng Long Kẻ Nghệ”
+103|pavilion-ho-guong-unesco-sovico-vi-su-phat-trien-ben-vung|Pavilion|2611130829|2611281200|12|Pavilion Hồ Gương | UNESCO & SOVICO vì sự phát triển bền vững
+104|hoi-cho-hang-thu-cong-thiet-ke-minh-hoa-cham-hoa-dua-no|Event|2611130800|2611151300|13|Hội chợ hàng thủ công-thiết kế-minh họa: Chăm hoa đua nở
+105|trien-lam-nghe-qua-pho|Exhibition|2611130300||15|Chuỗi triển lãm "Nghề qua Phố"
+106|pavilion-may|Pavilion|2611130200|2611281100|11|Pavilion "Mây"
+107|mo-xuong-nghe-si-muon-mau-ke-cho|Exhibition|2611130200|2611281000|2|Mở xưởng nghệ sĩ "Muôn màu kẻ chợ"
+108|giup-nhau-lam-nghe-craft-toolkit-ha-noi-2026|Workshop|2611080200|2611281000|6|Giúp nhau làm nghề - Craft ToolKit Hà Nội 2026
+109|hop-bao-cong-bo-chuong-trinh-le-hoi|Conference|2611060700|2611061030|16|Họp báo công bố chương trình Lễ hội
+110|dong-cam-cong-huong|Performance|2610200800|2610251600|17|Đồng Cam Cộng Hưởng
+111|ra-mat-tac-pham-sap-dat-se-cuoc-gap-cua-nghe-thu-cong-thiet-ke-va-cong-dong|Performance|2610171030|2610171330|18|Ra mắt tác phẩm sắp đặt “SE” - Cuộc gặp của nghề thủ công, thiết kế và cộng đồng
+112|chuyen-tuong-xua-chuyen-tuong-nay|Talk|2610160630|2610161000|19|CHUYỆN TUỒNG XƯA – CHUYỆN TUỒNG NAY
+113|le-cong-bo-du-an-trong-chuong-trinh-ket-duyen-sang-tao|Conference|2608290900|2608291000|1|Lễ công bố dự án trong Chương trình Kết Duyên Sáng Tạo
+114|toa-dam-so-huu-tri-tue-trong-san-pham-sang-tao|Talk|2608290700|2608290900|1|Tọa đàm “Sở hữu trí tuệ trong sản phẩm sáng tạo”
+115|nghe-trien-lam-lang-nghe-thiet-ke-va-sang-tao-tre|Exhibition|2608260800|2609141700|20|NGHỆ - Triển lãm Làng nghề, Thiết kế và Sáng tạo trẻ
+116|trung-bay-liu-la-liu-lo-mot-goc-luu-niem|Exhibition|2608260300|2609091400|21|Trưng bày “Líu La Líu Lô - Một góc lưu niệm”
+117|toa-dam-di-san-kien-truc-trong-thanh-pho-sang-tao|Talk|2411130200|2411130430|15|Toạ đàm “Di sản kiến trúc trong Thành phố sáng tạo”
