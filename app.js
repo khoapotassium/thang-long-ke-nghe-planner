@@ -49,7 +49,7 @@
       typeLabel: "Loại", here: "Bạn đang ở đây", conflictTag: "Lịch chưa thống nhất", loadFail: "Không tải được dữ liệu. Hãy thử tải lại trang."
     },
     en: {
-      subtitle: "Hanoi Festival of Creative Design 2026 · community site",
+      subtitle: "Thang Long Ke Nghe - Hanoi Festival of Creative Design 2026 · community site",
       searchPh: "Search activities, places…", nearMe: "📍 Nearest to me", openNow: "Open now",
       mapHint: "The map shows activities on the selected day. Locations are approximate — use Directions.",
       tabList: "Events", tabMap: "Map", tabPlan: "For you", tabMine: "My plan",
